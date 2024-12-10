@@ -1,15 +1,19 @@
 import React from "react";
-import socketIO from "socket.io-client";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Join from "./component/join/join.jsx";
 
-const ENDPOINT = "http://localhost:4500";
-const socket = socketIO(ENDPOINT, { transports: ["websocket"] });
+// const ENDPOINT = "http://localhost:4500";
+// const socket = socketIO(ENDPOINT, { transports: ["websocket"] });
 
 const App = () => {
-  socket.on("connect", () => {
-    console.log("new connection");
-  });
-
-  return <div>App</div>;
+  return (
+    <div className="app">
+      <Router>
+        <Route path="/" component={} />
+        <Route path="/chat" component={}/>
+      </Router>
+    </div>
+  );
 };
 
 export default App;
