@@ -1,16 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Join from "./component/join/join.jsx";
-
-// const ENDPOINT = "http://localhost:4500";
-// const socket = socketIO(ENDPOINT, { transports: ["websocket"] });
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Join from "./component/join";
 
 const App = () => {
   return (
     <div className="app">
       <Router>
-        <Route path="/" component={} />
-        <Route path="/chat" component={}/>
+        <Routes>
+          <Route path="/" element={<Join />} />
+          <Route path="/chat" />
+        </Routes>
       </Router>
     </div>
   );
